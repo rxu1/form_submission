@@ -20,12 +20,13 @@ namespace FormSubmission.Controllers
     public IActionResult Create(User newUser)
     {
       if(ModelState.IsValid)
-        return View("Index", newUser);
+        return RedirectToAction("Success", newUser);
       
       else 
-        return View("Success");
+        return View("Index");
     }
 
+    [HttpGet("success")]
     public IActionResult Success()
     {
       return View("Success");
