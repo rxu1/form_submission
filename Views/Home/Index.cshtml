@@ -1,0 +1,34 @@
+﻿@model User
+
+<div class="container-fluid">
+  <div class="row">
+    <form class="col-md-12 form-horizontal" action="/user/create" method="post">
+      <div class="form-group">
+        <span asp-validation-for="FirstName"></span>
+        <label asp-for="FirstName"></label>
+        <input type="text" asp-for="FirstName" placeholder="Enter Name">
+      </div>
+      <div class="form-group">
+        <span asp-validation-for="LastName"></span>
+        <label asp-for="LastName"></label>
+        <input type="text" asp-for="LastName" placeholder="Enter Name">
+      </div>
+      <div class="form-group">
+        <span asp-validation-for="Age"></span>
+        <label asp-for="Age"></label>
+        <input type="int" asp-for="Age">
+      </div>
+      <div class="form-group">
+        <span asp-validation-for="Email"></span>
+        <label asp-for="Email"></label>
+        <input type="text" asp-for="Email">
+      </div>
+      <div class="form-group">
+        <span asp-validation-for="Password"></span>
+        <label asp-for="Password"></label>
+        <input type="text" asp-for="Password">
+      </div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+  </div>
+</div>
